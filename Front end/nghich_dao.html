@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+
+</head>
+<link rel="stylesheet" href="section_problem.css">
+<body>
+
+    <a href="index.html" class="home-button">Home</a>
+    <a id="extra-button" class="extra-button">Show techniques used</a>
+    <a href = "Truockhilambai.html" class="beforeusing-button">How to Use the Website</a>
+    <div class="side-nav">
+  <div class="main-nav-btn">Navigate</div>
+
+  <div class="nav-submenu">
+    <a href="dethi.html">Problems from Exams</a>
+    <a href="baitapAoPs.html">Problems from AoPS Forum</a>
+    <a href="group_hinhhocphang.html">Problems from Vietnamese Geometry Forum</a>
+    <a href="nghich_dao.html">Inversion Problems</a>
+    <a href="bien_doi_ti_le.html">Ratio Chasing Problems</a>
+    <a href="vector.html">Vectors Problems</a>
+  </div>
+</div>
+
+    <div class = "title-container">
+    <h1>Inversion</h1>
+    </div>
+    <div class="container">
+        <h2 class="bold-text">Common Approach</h2>
+        <p class="centered-text">When a problem involves many circles and becomes hard to handle directly, we can apply inversions with familiar properties to reduce it to an easier configuration, especially in cases involving tangency between circles or between lines and circles.</p>
+    </div>
+
+    <div class="container">
+        <h2 class="bold-text">Example from a problem I solved</h2>
+        <div class="problem-box" id = "illustrate_inversion">		
+        <div class="problem-title">Illustrative Problem</div>
+	   <div class="problem-tag hardness-very">Very Hard</div>
+       
+        <div class="problem-content">
+            (Source: Vietnamese Euclidean Geometry group on Facebook, user <a href="https://web.facebook.com/groups/205466756603509/user/100072450942447/" target="_blank" style =  "color: white">Duong Nguyen</a>)
+            Let triangle \(ABC\) be inscribed in circle \((O)\), with \(B, C\) fixed and \(A\) moving on the major arc \(BC\) of \((O)\). Let \((I)\) be the incircle of the triangle, tangent to \(BC\) at \(D\). Line \(AI\) meets \((O)\) again at \(P\). Let \((T)\) be the internal \(A\)-mixtilinear circle, tangent to \((O)\) at \(X\). Segment \(XP\) meets \(AD\) at \(L\).  
+<p>a) Prove: \(L\) lies on \((T)\).</p>  
+<p>b) Let \(K\) be the reflection of \(A\) across line \(OI\). Let \(KD\) meet \((O)\) again at \(N\), and let \(NL\) meet \((O)\) again at \(J\). Prove: \(AJ\) always passes through a fixed point.</p>
+        
+        <img src="inversion_figure.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_illustrativeProblem.gsp" target = "_blank">Try It Yourself</a>
+        </div>
+    </div>
+    </div>
+</div>
+     <div class="container" style = "width: 100%; max-width: 1000px;"> 
+
+        <h2>Solution:</h2>
+        <iframe 
+  src="inversionProblem_solution.pdf"
+  width="100%"
+  height="800px"
+  style="border:none; border-radius:12px; box-shadow:0 0 20px rgba(255,255,255,0.1);">
+</iframe>
+<h2>Therefore, the problem is handled by using inversion centered at \(A\) with power \(AB\cdot AC\) combined with reflection about the bisector of \(\angle BAC\) to tackle the difficult configuration.</h2>
+</div>
+    <div class="container">
+        <h2 class="bold-text">Practice Problems</h2>
+    </div>
+   <div class="problem-box" id = "inversion_Problem1">		
+        <div class="problem-title">Problem 1</div>
+	   <div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+            (Teacher <a href="https://artofproblemsolving.com/community/user/68918" target="_blank" style =  "color: white">Tran Quang Hung</a>) Given a triangle \( ABC \) with altitude \( AD \) and orthocenter \( H \). Let \( M \) be the midpoint of \( BC \). \( G \) is the projection of \( A \) onto \( HM \). \( GD \) intersects the circle with diameter \( AH \) again at \( X \). \( XM \) intersects the circle with diameter \( AH \) again at \( Y \). \( DY \) intersects the circle with diameter \( AH \) again at \( Z \). The circles \( (ZXD) \) and \( (ZGM) \) intersect again at \( T \). Prove that the circle \( (ZTH) \) is tangent to line \( BC \).
+        </div>
+        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/debainghichdao1.png?v=1739639336163" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/nghichdaobai1.gsp?v=1739639195728" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai1.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	<div class="problem-box" id = "inversion_Problem2">		
+        <div class="problem-title">Problem 2</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+           (AoPS, navi_09220114 Malaysian SST 2024) Given a triangle \(ABC\), let \(I\) be the incenter, and \(J\) be the \(A\)-excenter. A line \(\ell\) through \(A\) perpendicular to \(BC\) intersects the lines \(BI\), \(CI\), \(BJ\), \(CJ\) at \(P\), \(Q\), \(R\), \(S\) respectively. Suppose the angle bisector of \(\angle BAC\) meets \(BC\) at \(K\), and \(L\) is a point such that \(AL\) is a diameter in \((ABC)\).
+
+Prove that the line \(KL\), \(\ell\), and the line through the centers of circles \((IPQ)\) and \((JRS)\) are concurrent.
+
+        </div>
+        <img src= "hinh_nghichdaobai2.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem2.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai2.html" class="button solution-btn">My Solution</a>
+			
+
+        </div>
+    </div>
+
+
+	<div class="problem-box" id = "inversion_Problem3">		
+        <div class="problem-title">Problem 3</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+           (Teacher Nguyen Duy Khuong) Let triangle \( A B C \) be inscribed in circle \( (O) \) and have circumcircle \( (I) \). \( X \) is the touchpoint of the \( A\text{-}mix \) incircle with \( (O) \). Let \( A^{\prime} \) be the reflection of \( A \) across \( I \). The line through \( X \) perpendicular to \( A^{\prime} X \) intersects \( (A\text{-}mix) \) at the second point \( T \). Prove that \( A T \) passes through the Feuerbach point.
+        </div>
+        <img src= "hinh_nghichdaobai3.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem3.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai3.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+
+	<div class="problem-box" id = "inversion_Problem4">		
+        <div class="problem-title">Problem 4</div>
+		<div class="problem-tag hardness-very">Very Hard</div>
+        <div class="problem-content">
+           (Teacher <a href="https://artofproblemsolving.com/community/user/68918" target="_blank" style =  "color: white">Tran Quang Hung</a>) Let \(ABCD\) be a parallelogram. Construct a point \(K\) such that \(KD \perp AD\) and \(KB \perp AB\). On an arbitrary line through \(A\), take two points \(E, F\) such that \(KE \parallel AB\) and \(KF \parallel AD\). The lines \(ED\) and \(FB\) intersect at \(P\). Let \(L\) be symmetric to \(K\) with respect to \(C\). Let \(Q \in PL\) such that \(\overline{PL} \cdot \overline{PQ} = PK^2\). Prove that \(AQ = AK\).
+
+        </div>
+        <img src= "hinh_nghichdaobai4.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem4.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai4.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+
+
+	<div class="problem-box" id = "inversion_Problem5">		
+        <div class="problem-title">Problem 5</div>
+		<div class="problem-tag hardness-moderate">Moderate</div>
+        <div class="problem-content">
+           	(AoPS forum, user tuquanhang) Given triangle \(ABC\) inscribed in circle \((O)\). The circle \((K)\) is tangent with \(AB, AC\) and tangent with \((O)\) internally at \(T\). Let \(L\) be the point on \((K)\) such that circle \((BLC)\) is tangent with \((K)\). \(AL\) cuts \((BLC)\) again at \(P\). Let \(I\) be the incenter of triangle \(ABC\).  
+a. Prove that \(L, P, T\) and \(I\) are concyclic.  
+b. Let \(M, N\) be the points on the circle \((BLC)\) such that \(PM, PN\) are tangent with the incircle \((I)\). Prove that \(MN \parallel BC\).
+
+        </div>
+        <img src= "hinh_nghichdaobai5.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem5.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai5.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+	<div class="problem-box" id = "inversion_Problem6">		
+        <div class="problem-title">Problem 6</div>
+		<div class="problem-tag hardness-moderate">Moderate</div>
+        <div class="problem-content">
+           (Teacher <a href="https://artofproblemsolving.com/community/user/68918" target="_blank" style =  "color: white">Tran Quang Hung</a>) Given triangle \(ABC\) with circumcenter \(O\). Choose any point \(P\) on line \(AO\). On circles \((PAB)\) and \((PAC)\), take points \(Q\) and \(R\) such that \(\angle BAQ = \angle CAR\). Take points \(M\) and \(N\) on \(AQ\) and \(AR\) respectively such that \(MA = MB\) and \(NA = NC\). Let \(E\) and \(F\) be points on \(CA\) and \(AB\) respectively such that \(NE \perp AB\) and \(MF \perp AC\). Let \(S\) and \(T\) be the intersections of \(MF\) and \(NE\) with the perpendicular bisectors of \(AQ\) and \(AR\) respectively. Prove that \(EF \parallel ST \parallel BC\).
+
+        </div>
+        <img src= "hinh_nghichdaobai6.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem6.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai6.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+<script src="section_problem_script.js"></script>
+</body>
+</html>

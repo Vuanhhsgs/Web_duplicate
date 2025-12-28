@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Before Using</title>
+    <style>
+        /* Full-page background */
+        body {
+            font-family: Arial, sans-serif;
+             margin: 0;
+            padding: 20px;
+            color: #e6e6e6;
+            background: url('mainwebbackground.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+          .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 2px solid white;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            z-index: 1000;
+        }
+        .home-button:hover {
+            background-color: #333;
+            border-color: #fff;
+            box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
+        }
+
+/* === SIDE NAVIGATION BUTTON === */
+.side-nav {
+    position: fixed;
+    left: 10px;
+    top: 70px;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 99;
+}
+
+/* Main button */
+.main-nav-btn {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 6px rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav-btn:hover {
+    background-color: #333;
+    box-shadow: 0px 6px 10px rgba(255,255,255,0.4);
+    transform: translateY(-2px);
+}
+
+/* Submenu hidden initially */
+.nav-submenu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition:
+        opacity 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+        transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Activated state controlled by JS */
+.side-nav.active .nav-submenu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Submenu links */
+.nav-submenu a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 6px rgba(255,255,255,0.3);
+    margin-top: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.nav-submenu a:hover {
+    background-color: #333;
+    box-shadow: 0px 8px 12px rgba(255,255,255,0.4);
+    transform: translateX(6px);
+}
+
+        /* Center card */
+        .container {
+            width: 90%;
+            max-width: 760px;
+            margin: 40px auto;
+            background-color: rgba(17,17,17,0.78);
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            color: #f2f2f2;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e6e6e6;
+        }
+
+        code {
+            background: rgba(255,255,255,0.04);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        .problem-container {
+            background-color: rgba(34,34,34,0.95);
+            padding: 16px;
+            border-radius: 10px;
+            margin: 18px auto;
+            width: 100%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        .problem-image {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 6px;
+            display:block;
+            margin: 0 auto;
+        }
+        .tool-section {
+            margin-top: 18px;
+            text-align: center;
+        }
+        .tool-section h2 {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .tool-section p {
+            color: #dcdcdc;
+        }
+
+         .try-button {
+            display: inline-block;
+             margin-top: 10px;
+            padding: 10px 14px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+             border-radius: 6px;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.06);
+         }
+        .try-button:hover {
+            background-color: #0056b3;
+        }
+         @media (max-width: 700px) {
+            .container { padding: 16px; margin: 70px 12px; }
+            .home-button { padding: 10px 14px; font-size: 16px; }
+            .problem-image { max-width: 340px; }
+        }
+         hhtml::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+</style>
+
+</head>
+<body>
+     <a href="index.html" class="home-button">Home</a>
+     <div class="side-nav">
+  <div class="main-nav-btn">Navigate</div>
+
+  <div class="nav-submenu">
+    <a href="dethi.html">Problems from Exams</a>
+    <a href="baitapAoPs.html">Problems from AoPS Forum</a>
+    <a href="group_hinhhocphang.html">Problems from Vietnamese Geometry Forum</a>
+    <a href="nghich_dao.html">Inversion Problems</a>
+    <a href="bien_doi_ti_le.html">Ratio Chasing Problems</a>
+    <a href="vector.html">Vectors Problems</a>
+  </div>
+</div>
+
+
+    <div class="container">
+
+     <h1>Usage Instructions</h1>
+
+        <p>
+            This website provides a curated collection of geometry problems. For the best experience, please download and install
+            <strong>Geometer's Sketchpad</strong> from the official site:
+            <a href="https://www.keycurriculum.com" target="_blank" style="color:#9ecbff; text-decoration: none;">keycurriculum.com</a>.
+        </p>
+
+        <p>
+            After installing, the app will prompt for license information. To use it with the settings provided here, enter:
+            <br><strong>License name:</strong> Pythagoras Single User License 1863 KJUJAM
+            <br><strong>Authorization code:</strong> BDFBF968
+        </p>
+
+        <p>Each problem on this site follows the format shown below:</p>
+          <img src="idklol.png"
+                 alt="Illustrative problem" class="problem-image">
+         <p><strong>Click "My Solution"</strong> to view my solution.</p>
+        <p><strong>Click "Try It Yourself"</strong> to download a <code>.gsp</code> file. Open that file with <strong>Geometer's Sketchpad</strong> and work from the prepared figure.</p>
+        <p>On the top left corner, there's a button "SHOW TECHNIQUES USED", click on it to show every techniques that are used for every problem.</p>
+        <p>Click on it again to hide all techniques that are used for every problem</p>
+        <div class="tool-section">
+            <h2>Drawing support tool</h2>
+            <p>You can download the drawing tool I created to help constructing figures quickly.</p>
+            <a href="Supporting-Tool.gsp"
+               download="Supporting-Tool.gsp" class="try-button">Download drawing tool</a>
+            <h2 style="margin-top:18px;">How to use</h2>
+            <p>Open the downloaded tool file, then switch to your working figure. Hover where shown in the image below to access helper tools for easier drawing.</p>
+
+        <video autoplay loop muted style="max-width: 600px; width:100%; border-radius:10px; display:block; margin:15px auto;">
+      <source src="supporting_tool_instruction.mp4" type="video/mp4">
+    </video>
+
+        </div>
+    </div>
+
+<script>const sideNav = document.querySelector('.side-nav');
+const mainBtn = document.querySelector('.main-nav-btn');
+
+// Add "active" class on first hover
+mainBtn.addEventListener('mouseenter', () => {
+    sideNav.classList.add('active');
+});
+
+// Optional: remove "active" when leaving the button + submenu area
+sideNav.addEventListener('mouseleave', () => {
+    sideNav.classList.remove('active');
+});
+</script>
+</body>
+</html>
+
+        
