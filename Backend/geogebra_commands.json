@@ -1,0 +1,544 @@
+{
+    "AffineRatio": [
+        {
+            "syntax": "AffineRatio( <Point A>, <Point B>, <Point C> )",
+            "description": "Returns the affine ratio λ of three collinear points A, B and C, where C = A + λ * AB."
+        }
+    ],
+    "Angle": [
+        {
+            "syntax": "Angle( <Vector>, <Vector> )",
+            "description": "Returns the angle between two vectors (result in [0,360°] or [0,2π] depending on the default angle unit)."
+        },
+        {
+            "syntax": "Angle( <Line>, <Line> )",
+            "description": "Returns the angle between the direction vectors of two lines (result in [0,360°] or [0,2π] depending on the default\nangle unit)."
+        },
+        {
+            "syntax": "Angle( <Line>, <Plane> )",
+            "description": "Returns the angle between the line and the plane."
+        },
+        {
+            "syntax": "Angle( <Plane>, <Plane> )",
+            "description": "Returns the angle between the two given planes."
+        },
+        {
+            "syntax": "Angle( <Point>, <Apex>, <Point> )",
+            "description": "Returns the angle defined by the given points (result in [0,360°] or [0,2π] depending on the default angle unit)."
+        },
+        {
+            "syntax": "Angle( <Point>, <Apex>, <Angle> )",
+            "description": "Returns the angle of size α drawn from point with apex."
+        },
+        {
+            "syntax": "Angle( <Point>, <Point>, <Point>, <Direction> )",
+            "description": "Returns the angle defined by the points and the given Direction, that may be a line or a plane (result in [0,360°]\nor [0,2π] depending on the default angle unit)."
+        }
+    ],
+    "AngleBisector": [
+        {
+            "syntax": "AngleBisector( <Line>, <Line> )",
+            "description": "Returns both angle bisectors of the lines."
+        },
+        {
+            "syntax": "AngleBisector( <Point>, <Point>, <Point> )",
+            "description": "Returns the angle bisector of the angle defined by the three points."
+        }
+    ],
+    "Arc": [
+        {
+            "syntax": "Arc( <Circle>, <Point M >, <Point N> )",
+            "description": "Returns the directed arc (counterclockwise) of the given circle, with endpoints M and N."
+        },
+        {
+            "syntax": "Arc( <Ellipse>, <Point M>, <Point N> )",
+            "description": "Returns the directed arc (counterclockwise) of the given ellipse, with endpoints M and N."
+        },
+        {
+            "syntax": "Arc( <Circle>, <Parameter Value>, <Parameter Value> )",
+            "description": "Returns the circle arc of the given circle, whose endpoints are identified by the specified values of the parameter."
+        },
+        {
+            "syntax": "Arc( <Ellipse>, <Parameter Value>, <Parameter Value> )",
+            "description": "Returns the circle arc of the given ellipse, whose endpoints are identified by the specified values of the parameter."
+        }
+    ],
+    "AreCollinear": [
+        {
+            "syntax": "AreCollinear( <Point>, <Point>, <Point> )",
+            "description": "Decides if the points are collinear."
+        }
+    ],
+    "AreCongruent": [
+        {
+            "syntax": "AreCongruent( <Object>, <Object> )",
+            "description": "Decides if the objects are congruent."
+        }
+    ],
+    "ArePerpendicular": [
+        {
+            "syntax": "ArePerpendicular( <Line>, <Line> )",
+            "description": "Decides if the lines are perpendicular.\nNormally this command computes the result numerically. This behavior can be changed by using the\nProve command."
+        }
+    ],
+    "Barycenter": [
+        {
+            "syntax": "Barycenter( <List of Points>, <List of Weights> )",
+            "description": "Set the center of a system of points in the list, defined as the average of their positions, weighted by their value,\nusing the proper formula."
+        }
+    ],
+    "Centroid": [
+        {
+            "syntax": "Centroid( <Polygon> )",
+            "description": "Returns the centroid of the polygon."
+        }
+    ],
+    "Circle": [
+        {
+            "syntax": "Circle( <Point>, <Radius Number> )",
+            "description": "Yields a circle with given center and radius."
+        },
+        {
+            "syntax": "Circle( <Point>, <Segment> )",
+            "description": "Yields a circle with given center and radius equal to the length of the given segment."
+        },
+        {
+            "syntax": "Circle( <Point>, <Point> )",
+            "description": "Yields a circle with given center through a given point."
+        },
+        {
+            "syntax": "Circle( <Point>, <Point>, <Point> )",
+            "description": "Yields a circle through the three given points (if they do not lie on the same line)."
+        },
+        {
+            "syntax": "Circle( <Line>, <Point> )",
+            "description": "Creates a circle with line as axis and through the point."
+        },
+        {
+            "syntax": "Circle( <Point>, <Radius>, <Direction> )",
+            "description": "Creates a circle with center, radius, and axis parallel to direction, which can be a line, vector or plane."
+        },
+        {
+            "syntax": "Circle( <Point>, <Point>, <Direction> )",
+            "description": "Creates a circle with center, through a point, and axis parallel to direction."
+        }
+    ],
+    "CircularArc": [
+        {
+            "syntax": "CircularArc( <Midpoint>, <Point A>, <Point B> )",
+            "description": "Creates a circular arc with midpoint between the two points."
+        }
+    ],
+    "CircularSector": [
+        {
+            "syntax": "CircularSector( <Midpoint>, <Point A>, <Point B> )",
+            "description": "Creates a circular sector with midpoint between the two points."
+        }
+    ],
+    "CircumcircularArc": [
+        {
+            "syntax": "CircumcircularArc( <Point>, <Point>, <Point> )",
+            "description": "Creates a circular arc through three points, where the first point is the starting point and the third point is the\nendpoint of the circumcircular arc."
+        }
+    ],
+    "CircumcircularSector": [
+        {
+            "syntax": "CircumcircularSector( <Point>, <Point>, <Point> )",
+            "description": "Creates a circular sector whose arc runs through the three points, where the first point is the starting point and the\nthird point is the endpoint of the arc."
+        }
+    ],
+    "Circumference": [
+        {
+            "syntax": "Circumference(Conic)",
+            "description": "If the given conic is a circle or ellipse, this command returns its circumference. Otherwise the result is undefined."
+        }
+    ],
+    "ClosestPoint": [
+        {
+            "syntax": "ClosestPoint( <Path>, <Point> )",
+            "description": "Returns a new point on a path which is the closest to a selected point."
+        },
+        {
+            "syntax": "ClosestPoint( <Line>, <Line> )",
+            "description": "Returns a new point on the first line which is the closest to the second line."
+        }
+    ],
+    "ClosestPointRegion": [
+        {
+            "syntax": "ClosestPointRegion( <Region>, <Point> )",
+            "description": "Returns a new point on the region which is the closest to a selected point."
+        }
+    ],
+    "Cubic": [
+        {
+            "syntax": "Cubic( <Point>, <Point>, <Point>, <Number> )",
+            "description": "Gives n-th triangle cubic of the given triangle ABC."
+        }
+    ],
+    "Difference": [
+        {
+            "syntax": "Difference( <Polygon>, <Polygon> )",
+            "description": "Finds the difference of the two polygons."
+        }
+    ],
+    "Direction": [
+        {
+            "syntax": "Direction( <Line> )",
+            "description": "Yields the direction vector of the line."
+        }
+    ],
+    "Distance": [
+        {
+            "syntax": "Distance( <Point>, <Object> )",
+            "description": "Yields the shortest distance between a point and an object."
+        },
+        {
+            "syntax": "Distance( <Line>, <Line> )",
+            "description": "Yields the distance between two lines."
+        },
+        {
+            "syntax": "Distance( <Plane>, <Plane> )",
+            "description": "Yields the distance between the two planes."
+        }
+    ],
+    "Envelope": [
+        {
+            "syntax": "Envelope( <Path>, <Point> )",
+            "description": "Creates the envelope equation of a set of output paths while the\nmoving point is bound to another object."
+        }
+    ],
+    "Incircle": [
+        {
+            "syntax": "Incircle( <Point>, <Point>, <Point> )",
+            "description": "Returns Incircle of the triangle formed by the\nthree Points."
+        }
+    ],
+    "InteriorAngles": [
+        {
+            "syntax": "InteriorAngles( <Polygon> )",
+            "description": "Creates all the interior angles of the given polygon."
+        }
+    ],
+    "Intersect": [
+        {
+            "syntax": "Intersect( <Object>, <Object> )",
+            "description": "Yields the intersection points of two objects."
+        },
+        {
+            "syntax": "Intersect( <Object>, <Object>, <Index of Intersection Point> )",
+            "description": "Yields the nth intersection point of two objects. Each object must be a line, conic, polynomial function or implicit\ncurve."
+        },
+        {
+            "syntax": "Intersect( <Object>, <Object>, <Initial Point> )",
+            "description": "Yields an intersection point of two objects by using a numerical, iterative method with initial point."
+        },
+        {
+            "syntax": "Intersect( <Function>, <Function>, <Start x-Value>, <End x-Value> )",
+            "description": "Yields the intersection points numerically for the two functions in the given interval."
+        },
+        {
+            "syntax": "Intersect( <Curve 1>, <Curve 2>, <Parameter 1>, <Parameter 2> )",
+            "description": "Finds one intersection point using a numerical, iterative method starting at the given parameters."
+        },
+        {
+            "syntax": "Intersect( <Function>, <Function> )",
+            "description": "Yields a list containing the intersection points of two objects."
+        },
+        {
+            "syntax": "Intersect( <Object>, <Object> )",
+            "description": ""
+        }
+    ],
+    "IntersectPath": [
+        {
+            "syntax": "IntersectPath( <Line>, <Polygon> )",
+            "description": "Creates the intersection path between line and polygon."
+        },
+        {
+            "syntax": "IntersectPath( <Polygon>, <Polygon> )",
+            "description": "Creates the intersection polygon between two given polygons."
+        },
+        {
+            "syntax": "IntersectPath( <Plane>, <Polygon> )",
+            "description": "Creates the intersection path between plane and polygon."
+        },
+        {
+            "syntax": "IntersectPath( <Plane>, <Quadric> )",
+            "description": "Creates the intersection path between plane and quadric."
+        }
+    ],
+    "Length": [
+        {
+            "syntax": "Length( <Object> )",
+            "description": "Yields the length of the object."
+        },
+        {
+            "syntax": "Length( <Function>, <Start x-Value>, <End x-Value> )",
+            "description": "Yields the length of the function graph in the given interval."
+        },
+        {
+            "syntax": "Length( <Function>, <Start Point>, <End Point> )",
+            "description": "Yields the length of the function graph between the two points."
+        },
+        {
+            "syntax": "Length( <Curve>, <Start t-Value>, <End t-Value> )",
+            "description": "Yields the length of the curve between the two values of the parameter."
+        },
+        {
+            "syntax": "Length( <Curve>, <Start Point>, <End Point> )",
+            "description": "Yields the length of the curve between the two points that lie on the curve."
+        },
+        {
+            "syntax": "Length( <Function>, <Start x-Value>, <End x-Value> )",
+            "description": "Calculates the length of a function graph between the two points."
+        },
+        {
+            "syntax": "Length( <Function>, <Variable>, <Start x-Value>, <End x-Value> )",
+            "description": "Calculates the length of a function graph from Start x-value to End x-value."
+        }
+    ],
+    "Locus": [
+        {
+            "syntax": "Locus( <Point Creating Locus Line Q>, <Point P>)",
+            "description": "Returns the locus curve of the point Q, which depends on the point P."
+        },
+        {
+            "syntax": "Locus( <Point Creating Locus Line Q>, <Slider t>)",
+            "description": "Returns the locus curve of the point Q, which depends on the values assumed by the slider t."
+        },
+        {
+            "syntax": "Locus( <Slopefield>, <Point> )",
+            "description": "Returns the locus curve which equates to the slopefield at the given point."
+        },
+        {
+            "syntax": "Locus( <f(x, y)>, <Point> )",
+            "description": "Returns the locus curve which equates to the solution of the differential equation \\(\\frac{dy}{dx}=f(x,y)\\) in\nthe given point. The solution is calculated numerically."
+        }
+    ],
+    "LocusEquation": [
+        {
+            "syntax": "LocusEquation( <Locus> )",
+            "description": "Calculates the equation of a Locus and plots this as an Implicit Curve."
+        },
+        {
+            "syntax": "LocusEquation( <Point Creating Locus Line Q>, <Point P> )",
+            "description": "Calculates the equation of a Locus by using inputs tracer point Q and mover point P, and plots this as an Implicit\nCurve."
+        },
+        {
+            "syntax": "LocusEquation( <Boolean Expression>, <Free Point> )",
+            "description": "Calculates the locus of the free point such that the boolean condition is satisified."
+        }
+    ],
+    "PathParameter": [
+        {
+            "syntax": "PathParameter( <Point On Path> )",
+            "description": "Returns the parameter (i.e. a number ranging from 0 to 1) of the point that belongs to a\npath."
+        }
+    ],
+    "Perimeter": [
+        {
+            "syntax": "Perimeter( <Polygon> )",
+            "description": "Returns the perimeter of the polygon."
+        },
+        {
+            "syntax": "Perimeter( <Conic> )",
+            "description": "If the given conic is a circle or ellipse, this command returns its perimeter. Otherwise the result is undefined."
+        },
+        {
+            "syntax": "Perimeter( <Locus> )",
+            "description": "If the given locus is finite, this command returns its approximate perimeter. Otherwise the result is undefined."
+        }
+    ],
+    "PerpendicularBisector": [
+        {
+            "syntax": "PerpendicularBisector( <Segment> )",
+            "description": "Yields the perpendicular bisector of a segment."
+        },
+        {
+            "syntax": "PerpendicularBisector( <Point>, <Point> )",
+            "description": "Yields the perpendicular bisector of a line segment between two points."
+        },
+        {
+            "syntax": "PerpendicularBisector( <Point>, <Point>, <Direction>)",
+            "description": "Yields the perpendicular bisector of a line segment between two points which is perpendicular to the direction.\n<Direction> can either be a vector, an axis, a line or a segment."
+        }
+    ],
+    "PerpendicularLine": [
+        {
+            "syntax": "PerpendicularLine( <Point>, <Line> )",
+            "description": "Creates a line through the point perpendicular to the given line."
+        },
+        {
+            "syntax": "PerpendicularLine( <Point>, <Segment> )",
+            "description": "Creates a line through the point perpendicular to the given segment."
+        },
+        {
+            "syntax": "PerpendicularLine( <Point>, <Vector> )",
+            "description": "Creates a line through the point perpendicular to the given vector."
+        },
+        {
+            "syntax": "PerpendicularLine( <Point>, <Plane> )",
+            "description": "Creates a perpendicular line to the plane through the given point."
+        },
+        {
+            "syntax": "PerpendicularLine( <Line> , <Line> )",
+            "description": "Creates a perpendicular line to the given lines through the intersection point of the two lines."
+        },
+        {
+            "syntax": "PerpendicularLine( <Point>, <Direction>, <Direction> )",
+            "description": "Creates a perpendicular line to the given directions (that can be lines or vectors) through the given point."
+        },
+        {
+            "syntax": "PerpendicularLine( <Point>, <Line>, <Context> )",
+            "description": "Creates a perpendicular line to the line through the point and depending on the context."
+        }
+    ],
+    "Point": [
+        {
+            "syntax": "Point( <Object> )",
+            "description": "Returns a point on the geometric object. The resulting point can be moved along the\npath."
+        },
+        {
+            "syntax": "Point( <Object>, <Parameter> )",
+            "description": "Returns a point on the geometric object with given path parameter."
+        },
+        {
+            "syntax": "Point( <Point>, <Vector> )",
+            "description": "Creates a new point by adding the vector to the given point."
+        },
+        {
+            "syntax": "Point( <List> )",
+            "description": "Converts a list containing two numbers into a Point."
+        }
+    ],
+    "PointIn": [
+        {
+            "syntax": "PointIn( <Region> )",
+            "description": "Returns a point restricted to given region."
+        }
+    ],
+    "Polygon": [
+        {
+            "syntax": "Polygon( <Point>, …​, <Point> )",
+            "description": "Returns a polygon defined by the given points."
+        },
+        {
+            "syntax": "Polygon( <Point>, <Point>, <Number of Vertices> )",
+            "description": "Creates a regular polygon with n vertices."
+        },
+        {
+            "syntax": "Polygon( <List of Points> )",
+            "description": "Returns a polygon defined by the points in the list."
+        },
+        {
+            "syntax": "Polygon( <Point>, <Point>, <Number of Vertices n>, <Direction> )",
+            "description": "Creates a regular polygon with n vertices, and directed by the direction (e.g. a plane to which the polygon will\nbe parallel, if possible)."
+        }
+    ],
+    "Polyline": [
+        {
+            "syntax": "Polyline( <List of Points> )",
+            "description": "Creates an open polygonal chain (i.e. a connected series of segments) having the initial vertex in the first point of\nthe list, and the final vertex in the last point of the list."
+        },
+        {
+            "syntax": "Polyline( <Point>, …​, <Point> )",
+            "description": "Creates an open polygonal chain (i.e. a connected series of segments) having the initial vertex in the first entered\npoint, and the final vertex in the last entered point."
+        }
+    ],
+    "Radius": [
+        {
+            "syntax": "Radius( <Conic> )",
+            "description": "Returns the radius of a conic."
+        }
+    ],
+    "RandomPointIn": [
+        {
+            "syntax": "RandomPointIn( <Region> )",
+            "description": "Creates a random point inside a given polygon or closed conic."
+        },
+        {
+            "syntax": "RandomPointIn( <List of Points> )",
+            "description": "Returns a random point inside the polygon with given vertices."
+        },
+        {
+            "syntax": "RandomPointIn( <xMin>, <xMax>, <yMin>, <yMax> )",
+            "description": "Creates a random point with x-coordinate from interval [xMin,xMax] and y-coordinate from interval [yMin, yMax]."
+        }
+    ],
+    "RigidPolygon": [
+        {
+            "syntax": "RigidPolygon( <Polygon> )",
+            "description": "Creates a copy of any polygon that can only be translated by dragging its first vertex and rotated by dragging its\nsecond vertex."
+        },
+        {
+            "syntax": "RigidPolygon( <Polygon>, <Offset x>, <Offset y> )",
+            "description": "Creates a copy of any polygon with the given offset that can only be translated by dragging its first vertex and\nrotated by dragging its second vertex."
+        },
+        {
+            "syntax": "RigidPolygon( <Free Point>, …​, <Free Point> )",
+            "description": "Creates polygon whose shape cannot be changed. This polygon can be translated by dragging its first vertex and rotated\nby dragging its second vertex."
+        }
+    ],
+    "Sector": [
+        {
+            "syntax": "Sector( <Conic>, <Point>, <Point> )",
+            "description": "Yields a conic sector between two points on the conic section and calculates its area."
+        },
+        {
+            "syntax": "Sector( <Conic>, <Parameter Value>, <Parameter Value> )",
+            "description": "Yields a conic sector between two parameter values between 0 and 2π on the conic section and calculates its area."
+        }
+    ],
+    "Semicircle": [
+        {
+            "syntax": "Semicircle( <Point>, <Point> )",
+            "description": "Creates a semicircle above the segment between the two points and displays its length in Algebra View."
+        }
+    ],
+    "Slope": [
+        {
+            "syntax": "Slope( <Line> )",
+            "description": "Returns the slope of the given line."
+        }
+    ],
+    "TriangleCenter": [
+        {
+            "syntax": "TriangleCenter( <Point>, <Point>, <Point>, <Number> )",
+            "description": "gives n-th triangle center of triangle ABC. Works for n < 3054."
+        }
+    ],
+    "TriangleCurve": [
+        {
+            "syntax": "TriangleCurve( <Point P>, <Point Q>, <Point R>, <Equation in A, B, C> )",
+            "description": "Creates implicit polynomial, whose equation in\nbarycentric coordinates with respect to\npoints P, Q, R is given by the fourth parameter; the barycentric coordinates are referred to as A, B, C."
+        }
+    ],
+    "Trilinear": [
+        {
+            "syntax": "Trilinear( <Point>, <Point>, <Point>, <Number>, <Number>, <Number> )",
+            "description": "creates a point whose trilinear coordinates are the given numbers\nwith respect to triangle with given points."
+        }
+    ],
+    "Vertex": [
+        {
+            "syntax": "Vertex( <Conic> )",
+            "description": "Returns (all) vertices of the conic section."
+        },
+        {
+            "syntax": "Vertex( <Inequality> )",
+            "description": "Returns the points of intersection of the borders."
+        },
+        {
+            "syntax": "Vertex( <Polygon> )",
+            "description": "Returns (all) vertices of the polygon."
+        },
+        {
+            "syntax": "Vertex( <Polygon>, <Index n> )",
+            "description": "Returns n-th vertex of the polygon."
+        },
+        {
+            "syntax": "Vertex( <Segment>, <Index> )",
+            "description": "Returns the start-point (Index = 1) or end-point (Index = 2) of the Segment."
+        }
+    ]
+}
