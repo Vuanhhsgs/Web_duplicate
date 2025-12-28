@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <title>Art of Euclidean Geometry</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+   <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index_searchbar.css">
+    <link rel="stylesheet" href="index_module.css">
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <div class="left">
+            <p>Telephone: 0889769047</p>
+            <p>Email: <a href="mailto:havuanh8a0@gmail.com">havuanh8a0@gmail.com</a></p>
+        </div>
+        <div class="menu">
+            <div class="combined-menu-box">
+                <div class="menu-box">
+                    <a href="Truockhilambai.html">Before Using</a>
+                    <div class="hover-info">Introduction on how to navigate this website</div>
+                </div>
+
+                <div class="menu-box">
+                    <a href="About.html">About this website</a>
+                    <div class="hover-info">A brief introduction about the website</div>
+                </div>
+            </div>
+            <div class="menu-box contact">
+                <a href="#">Contact</a>
+                <div class="contact-icons">
+                    <a href="https://web.facebook.com/ha.vu.annh" target="_blank">
+                        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/facebook-icon.png?v=1739639316034" style="width: 20px; height: 20px;"> Facebook
+                    </a>
+                    <a href="https://artofproblemsolving.com/community/user/1047323" target="_blank">
+                        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/aops.png?v=1739639310359" style="width: 20px; height: 20px;"> AoPS
+                    </a>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <header>
+        <h1>ART OF EUCLIDEAN GEOMETRY</h1>
+    </header>
+
+<!-- SEARCH BAR SECTION -->
+<div class="search-container">
+<div class="search-box" id="searchBox">
+  <span class="search-icon">🔍︎</span>
+  <div class="search-input-container" id="searchInputContainer">
+    <input type="text" id="overlayInput" placeholder="Find the problems you're looking for by search and filter tags" />
+  </div>
+</div>
+</div>
+
+  <div class="search-container">
+    <div class="search-box" id="moduleBox">
+      <div class="search-input-container" id="moduleInputContainer">
+        <input type="text" id="moduleoverlayInput" placeholder="Enter any problem and get its diagram here" readonly />
+      </div>
+    </div>
+  </div>
+
+<!-- FULLSCREEN MODULE OVERLAY -->
+  <div class="search-module_overlay" id="moduleOverlay">
+    <div class="module_overlay-content">
+      <div class="module_overlay-top">
+        <textarea id="module_overlayInputOverlay" 
+         placeholder="Enter any problem and get its diagram here" 
+         autofocus 
+         autocomplete="off"></textarea>
+
+        <button class="close-btn" id="modulecloseOverlay">✕</button>
+      </div>
+      <div id="drop-area">
+        Drag & Drop files here or click to upload
+        <input type="file" id="fileElem" multiple>
+      </div>
+      <div class="search-buttons">
+          <button id="moduleButton" class="but">Generate Diagram</button>
+      </div>
+      <div id="ggb-element"></div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- FULLSCREEN SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="overlay-content">
+    <div class="overlay-top">
+      <input type="text" id="overlayInputOverlay" 
+       placeholder="Type to search problems or techniques you are looking for" 
+       autofocus 
+       autocomplete="off" />
+
+      <button class="close-btn" id="closeOverlay">✕</button>
+      <div id="suggestionDropdown"></div>
+    </div>
+
+
+    <div class = "search_tag-container"></div>
+
+    <div style="margin-bottom: 12px;">
+        <label style="font-size: 0.95rem; cursor: pointer;">
+            <input type="checkbox" id="advancedToggle" style="margin-right: 6px;">
+            Advanced Search (include method tags)
+        </label>
+    </div>
+    <div style="margin-bottom: 12px;">
+        <label style="font-size: 0.95rem; cursor: pointer;">
+            <input type="checkbox" id="smartToggle" style="margin-right: 6px;">
+            Smart Search (Search any description of problems you want)
+        </label>
+    </div>
+    
+        <div class="search-buttons">
+            <button id="searchButton" class="but" class="btn">Search</button>
+        </div>
+      
+    <div class="tag-container">
+        <p>Difficulty Tags:</p>
+        <div class="difficulty-tags">
+            <span class="difficulty-tag hardness-misc">Non-synthetic geometry</span>
+            <span class="difficulty-tag hardness-very_easy">Very Easy</span>
+            <span class="difficulty-tag hardness-easy">Easy</span>
+            <span class="difficulty-tag hardness-moderate">Moderate</span>
+            <span class="difficulty-tag hardness-hard">Hard</span>
+            <span class="difficulty-tag hardness-very">Very Hard</span>
+            <span class="difficulty-tag hardness-extreme">Extremely Hard</span>
+        </div>
+<p>Problem Tags:</p>
+<div class="problem-tags">
+  <span class="problem-tag">isogonal conjugates</span>
+  <span class="problem-tag">isotomic conjugate</span>
+  <span class="problem-tag">orthocenter</span>
+  <span class="problem-tag">circumcircle/circumcenter</span>
+  <span class="problem-tag">parallelism</span>
+  <span class="problem-tag">symmedian-Lemoine point</span>
+  <span class="problem-tag">arc midpoints</span>
+  <span class="problem-tag">concurrency</span>
+  <span class="problem-tag">collinearity</span>
+  <span class="problem-tag">tangency</span>
+  <span class="problem-tag">reflections</span>
+  <span class="problem-tag">similar triangles</span>
+  <span class="problem-tag">arbitrary point</span>
+  <span class="problem-tag">isogonal lines</span>
+  <span class="problem-tag">angle bisectors</span>
+  <span class="problem-tag">incircle/incenter</span>
+  <span class="problem-tag">mixtilinear incircle</span>
+  <span class="problem-tag">tangent circles</span>
+  <span class = "problem-tag">circles intersection</span>
+  <span class="problem-tag">centroid</span>
+  <span class="problem-tag">Euler line</span>
+  <span class="problem-tag">nine-point circle/center</span>
+  <span class="problem-tag">Feuerbach point</span>
+  <span class="problem-tag">A-Humpty point</span>
+  <span class="problem-tag">A-Dumpty point</span>
+  <span class="problem-tag">Nagel point</span>
+  <span class="problem-tag">Euler-reflection point</span>
+  <span class="problem-tag">Jerabek point</span>
+  <span class="problem-tag">external homothety center</span>
+  <span class="problem-tag">common tangents</span>
+  <span class="problem-tag">equal segments</span>
+  <span class="problem-tag">equal angles</span>
+  <span class="problem-tag">tangential quadrilateral</span>
+  <span class="problem-tag">cyclic quadrilateral</span>
+  <span class="problem-tag">geometric construction</span>
+  <span class="problem-tag">perpendicular bisector</span>
+  <span class="problem-tag">perpendicularity</span>
+  <span class="problem-tag">projections</span>
+  <span class="problem-tag">excircle/excenter</span>
+  <span class="problem-tag">diameter</span>
+  <span class="problem-tag">perpendicular bisector</span>
+  <span class="problem-tag">bisects</span>
+  <span class="problem-tag">equal segments</span>
+  <span class="problem-tag">orthocenter</span>
+  <span class="problem-tag">tangents</span>
+  <span class="problem-tag">circumcircle</span>
+  <span class="problem-tag">geometric number theory</span>
+  <span class="problem-tag">vector</span>
+  <span class="problem-tag">symmedian line</span>
+  <span class="problem-tag">assumption</span>
+  <span class="problem-tag">trapezoid</span>
+  <span class="problem-tag">isosceles trapezoid</span>
+  <span class="problem-tag">parallelogram</span>
+  <span class="problem-tag">isosceles triangle</span>
+  <span class="problem-tag">arbitrary line</span>
+  <span class="problem-tag">geometric construction</span>
+  <span class="problem-tag">radical center</span>
+  <span class="problem-tag">centroid</span>
+  <span class="problem-tag">Feuerbach point</span>
+</div>
+
+<p>Method Tags:</p>
+<div class="method-tags">
+  <span class="method-tag">angle chasing</span>
+  <span class="method-tag">ratio chasing</span>
+  <span class="method-tag">radical axis</span>
+  <span class="method-tag">power of a point</span>
+  <span class="method-tag">cross-ratio</span>
+  <span class="method-tag">law of Sines</span>
+  <span class="method-tag">special points construction</span>
+  <span class="method-tag">geometric transformation</span>
+  <span class="method-tag">homothety</span>
+  <span class="method-tag">Menelaus-Ceva theorem</span>
+  <span class="method-tag">harmonic conjugate</span>
+  <span class="method-tag">coaxial circles</span>
+  <span class="method-tag">inversion</span>
+  <span class="method-tag">Pascal theorem</span>
+  <span class="method-tag">pole and polar</span>
+  <span class="method-tag">La Hire theorem</span>
+  <span class="method-tag">Desargues theorem</span>
+  <span class="method-tag">geometric similarity</span>
+  <span class="method-tag">ERIQ lemma</span>
+  <span class="method-tag">symmetry</span>
+  <span class="method-tag">extraversion</span>
+  <span class="method-tag">trigonometric computation</span>
+  <span class="method-tag">Pythagores theorem</span>
+  <span class="method-tag">spiral similarity</span>
+  <span class="method-tag">ratio chasing</span>
+  <span class="method-tag">law of Sines</span>
+  <span class="method-tag">harmonic conjugate</span>
+  <span class="method-tag">Pascal theorem</span>
+  <span class="method-tag">geometric similarity</span>
+  <span class="method-tag">Menelaus theorem</span>
+  <span class="method-tag">ERIQ lemma</span>
+  <span class="method-tag">vectorial geometry</span>
+  <span class="method-tag">barycentric coordinates</span>
+  <span class="method-tag">law of sines</span>
+  <span class="method-tag">Monge D'Alembert theorem</span>
+</div>
+
+
+    </div>
+
+
+  </div>
+</div>
+
+
+    <main>
+        <div class="section-container">
+            <div class="section">
+                <h2 class="section-header">Selected Exercises</h2>
+
+                <div class="sub-box">
+                    <h3><a href="dethi.html">Interesting Problems from Competition Exams</a></h3>
+                    <h3> • Problems from International Olympiad</h3>
+                    <h3> • Problems from Regional and National Team Selection Contest in my country</h3>
+                </div>
+
+                <div class="sub-box">
+                    <h3><a href="group_hinhhocphang.html">Problems from the Euclidean Geometry Facebook Group</a></h3>
+                    <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/imgfb.PNG?v=1739639350249" alt="Group Facebook Image">
+                    <div class="containerbtn">
+                        <a href="https://www.facebook.com/groups/hinhhocphang.geometry" target="_blank" class="btn">Click to Access the Forum</a>
+                    </div>
+                </div>
+
+                <div class="sub-box">
+                    <h3><a href="baitapAoPs.html">Problems from AoPS Forum</a></h3>
+                    <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/imgaops.PNG?v=1739639340893" alt="AoPS Image">
+                    <div class="containerbtn">
+                        <a href="https://artofproblemsolving.com/community/c6t48f6_geometry" target="_blank" class="btn">Click to Access the Forum</a>
+                    </div>
+                </div>
+            </div>
+               
+
+
+
+
+            <div class="section">
+                <h2 class="section-header">My Favorite Problem-Solving Techniques</h2>
+
+                <div class="sub-box">
+                    <h3><a href="nghich_dao.html">Inversion</a></h3>
+                    <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/imgnd.PNG?v=1739639353153" alt="Inversion Image">
+                </div>
+
+                <div class="sub-box">
+                    <h3><a href="bien_doi_ti_le.html">Ratio Chasing</a></h3>
+                    <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/imgbdtl.png?v=1739639344031" alt="Ratio Chasing Image">
+                </div>
+
+                <div class="sub-box">
+                    <h3><a href="vector.html">Vectors</a></h3>
+                    <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/imgvector.png?v=1739639357050" alt="Vectors Image">
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+<script src="index_searchbar.js"></script>
+<script src="index_module.js"></script>
+<script src="index_ggb.js"></script>
+
+
+
+
+</body>
+
+</html>

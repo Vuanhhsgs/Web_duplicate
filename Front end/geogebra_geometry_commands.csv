@@ -1,0 +1,105 @@
+Command
+3D Commands
+Algebra Commands
+Chart Commands
+Conic Commands
+Discrete Math Commands
+Function Commands
+Geometry Commands
+GeoGebra Commands
+List Commands
+Logic Commands
+Optimization Commands
+Probability Commands
+Scripting Commands
+Spreadsheet Commands
+Statistics Commands
+Financial Commands
+Text Commands
+Transformation Commands
+Vector and Matrix Commands
+CAS Specific Commands
+Movement Tools
+Point Tools
+Line Tools
+Special Line Tools
+Polygon Tools
+Circle and Arc Tools
+Conic Section Tools
+Measurement Tools
+Transformation Tools
+Special Object Tools
+Action Object Tools
+General Tools
+CAS Tools
+Spreadsheet Tools
+3D Graphics Tools
+Custom Tools
+Manual
+Reference
+Manual
+Geometry Commands
+AffineRatio
+Angle
+AngleBisector
+Arc
+Area
+AreCollinear
+AreConcurrent
+AreConcyclic
+AreCongruent
+AreEqual
+AreParallel
+ArePerpendicular
+Barycenter
+Centroid
+Circle
+CircularArc
+CircularSector
+CircumcircularArc
+CircumcircularSector
+Circumference
+ClosestPoint
+ClosestPointRegion
+CrossRatio
+Cubic
+Difference
+Direction
+Distance
+Envelope
+Incircle
+InteriorAngles
+Intersect
+IntersectPath
+IsInRegion
+IsTangent
+Length
+Line
+Locus
+LocusEquation
+Midpoint
+PathParameter
+Perimeter
+PerpendicularBisector
+PerpendicularLine
+Point
+PointIn
+Polygon
+Polyline
+Prove
+ProveDetails
+Radius
+RandomPointIn
+Ray
+RigidPolygon
+Sector
+Segment
+Semicircle
+Slope
+Tangent
+TriangleCenter
+TriangleCurve
+Trilinear
+Union
+Type
+Vertex

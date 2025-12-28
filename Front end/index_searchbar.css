@@ -1,0 +1,358 @@
+.search-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;       
+    margin-bottom: 8px;
+}
+
+.search-buttons .but {
+    background-color: #6c757d;   
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.search-buttons .but:hover {
+    background-color: #7d8690;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+
+.search-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.search-input-container span.tag {
+  background-color: #444;
+  color: white;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-input-container span.tag .remove {
+  margin-left: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.search-input-container input {
+  text-align: center;
+}
+/*auto  suggestion of the dropdown box*/
+
+.overlay-top {
+    position: relative; /* now dropdown positions relative to overlay-top */
+}
+
+#suggestionDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 94.3%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #444;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    z-index: 1000;
+    margin-top: 4px;
+}
+
+
+#suggestionDropdown .suggestion-item {
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#suggestionDropdown .suggestion-item:hover {
+    background-color: #555;       /* slightly lighter on hover */
+}
+
+
+        /* Responsive tweaks */
+        @media (max-width: 980px) {
+            .section-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 1.25rem;
+            }
+            .section {
+                max-width: 720px;
+                width: 95%;
+            }
+            .top-bar .left p { font-size: 1rem; }
+            .top-bar .menu .menu-box { padding: 0.5rem 1rem; }
+        }
+
+    
+
+    html, body {
+    overflow: auto; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;    
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none; 
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    a, button, input[type="button"], input[type="submit"], [role="button"] {
+    cursor: pointer;
+}
+
+
+
+/* Problems when user searchs for tag */
+.redirect-problem {
+    display: inline-block;        /* behaves like a box */
+    width: 80%;                   /* relative to container (.problem-box) */
+    height: 40px;                 /* small height */
+    background-color: black;       /* box color */
+    color: white;                 /* text color */
+    border: 2px solid white;      /* slightly thick border */
+    border-radius: 8px;           /* rounded corners */
+    text-align: center;
+    line-height: 40px;            /* vertically center text */
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;              /* pointer on hover */
+    transition: all 0.3s ease;    /* smooth hover effects */
+     margin-top: -4px;       /* tightens spacing under problem tag */
+    margin-bottom: 8px;
+}
+.redirect-problem:hover {
+    color: #00e0ff;
+    text-shadow: 
+        0 0 8px rgba(23, 162, 184, 0.6),
+        0 0 15px rgba(23, 162, 184, 0.4);
+    border-color: #00e0ff;       /* optional: glow border */
+    transform: translateY(-2px);  /* subtle lift effect */
+}
+.problem-box {
+    background: linear-gradient(160deg, #1e1e1e, #2b2b2b);
+    color: white;
+    padding: 40px;
+    border: 3px solid #17a2b8;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 850px;
+    margin: 50px auto;
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.7),
+        inset 0 0 20px rgba(23, 162, 184, 0.15);
+    transition: all 0.3s ease;
+}
+.problem-box:hover {
+    box-shadow:
+        0 0 40px rgba(23, 162, 184, 0.3),
+        inset 0 0 25px rgba(23, 162, 184, 0.2);
+    transform: translateY(-5px);
+}
+
+/* ====== PROBLEM TITLE ====== */
+.problem-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    background-color: #17a2b8;
+    padding: 12px 25px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(23, 162, 184, 0.4);
+    letter-spacing: 0.5px;
+}
+
+/* ====== PROBLEM CONTENT ====== */
+.problem-content {
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding: 18px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    line-height: 1.6;
+}
+/* ====== IMAGE ====== */
+.problem-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
+/* Difficulty tag */
+.generate-difficulty-tag {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;       /* bigger size */
+    font-size: 18px;          /* slightly larger text */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin: 3px auto 8px auto; /* top 6px, bottom 14px */
+}
+.generate-difficulty-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+/* Colors per difficulty */
+.very_easy { background-color: #1B5E20; }  
+.easy { background-color: #28a745; }       /* green */
+.moderate { background-color: #ffc107; }   /* yellow */
+.hard { background-color: #fd7e14; }       /* orange */
+.very { background-color: #dc3545; }       /* red */
+.extreme { background-color: #6f42c1; }   /* purple */
+.misc { background-color: #6c757d; }       /* grey */
+
+
+.generate-problem-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 3px;       /* tightens spacing under difficulty */
+    margin-bottom: 8px;
+}
+
+/* Each tag style */
+.generate-problem-tags .tag {
+    background-color: #6c757d;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.generate-problem-tags .tag:hover {
+    background-color: #7d8690;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+.generate-method-tags {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;       /* tightens spacing under problem tag */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.generate-method-tags .tag {
+    background-color: #2E7D32;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.generate-method-tags .tag:hover {
+    background-color: #1B5E20;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+.search-results {
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 220px); /* fills screen below top inputs/buttons */
+  padding: 10px 20px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.25) transparent;
+}
+
+.search-results::-webkit-scrollbar {
+  width: 8px;
+}
+.search-results::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.3);
+  border-radius: 4px;
+}
+.search-results::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.45);
+}
+/* Section name */
+.title-container {
+    background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+    color: white;
+    text-align: center;
+    padding: 25px 40px;
+    border-radius: 18px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.15),
+        inset 0 0 15px rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+.title-container:hover {
+    box-shadow: 
+        0 0 25px rgba(255, 255, 255, 0.25),
+        inset 0 0 20px rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+}
+.container {
+    background: rgba(34, 34, 34, 0.9);
+    padding: 25px 30px;
+    margin: 25px auto;
+    width: 80%;
+    max-width: 850px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+.container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,84 @@
+/* === FULLSCREEN OVERLAY === */
+.search-module_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.97);
+  color: white;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+  overflow: hidden;
+  overflow-x: hidden;
+  padding: 10px 0;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.module_overlay-content {
+    max-width: 1400px;
+    margin: 0.1% auto;
+    padding: 1.5rem 1rem;
+    text-align: left;
+    overflow: hidden;
+}
+
+.module_overlay-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;  /* changed to flex-start for textarea */
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+
+.module_overlay-top textarea {  /* changed from input to textarea */
+    flex: 1;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    outline: none;
+    border: 2px solid #666;
+    min-height: 70px;  /* increased height */
+    resize: vertical;   /* allows user to resize */
+    font-family: inherit;
+    line-height: 1.5;
+}
+
+.module_overlay-top textarea:focus {
+  border-color: #9ecbff;
+}
+
+
+
+
+
+
+
+
+
+
+#ggb-element {
+  width: 1400px !important;
+  height: 670px !important;
+  max-width: none !important;
+  border: 5px solid rgb(0, 0, 0);
+}
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 40px;
+    width: 400px;
+    margin: 20px auto;
+    background-color: #555; /* gray background */
+    color: white;           /* white text */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}

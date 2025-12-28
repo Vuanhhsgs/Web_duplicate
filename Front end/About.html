@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Before Using</title>
+    <style>
+        /* Full-page background */
+        body {
+            font-family: Arial, sans-serif;
+             margin: 0;
+            padding: 20px;
+            color: #e6e6e6;
+            background: url('mainwebbackground.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: start;
+        }
+          .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 2px solid white;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            z-index: 1000;
+        }
+        .home-button:hover {
+            background-color: #333;
+            border-color: #fff;
+            box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
+        }
+
+        /* Center card */
+        .container {
+            width: 90%;
+            max-width: 760px;
+            margin: 40px auto;
+            background-color: rgba(17,17,17,0.78);
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            color: #f2f2f2;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e6e6e6;
+        }
+
+        code {
+            background: rgba(255,255,255,0.04);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        .problem-container {
+            background-color: rgba(34,34,34,0.95);
+            padding: 16px;
+            border-radius: 10px;
+            margin: 18px auto;
+            width: 100%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        .problem-image {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 6px;
+            display:block;
+            margin: 0 auto;
+        }
+        .tool-section {
+            margin-top: 18px;
+            text-align: center;
+        }
+        .tool-section h2 {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .tool-section p {
+            color: #dcdcdc;
+        }
+
+         .try-button {
+            display: inline-block;
+             margin-top: 10px;
+            padding: 10px 14px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+             border-radius: 6px;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.06);
+         }
+        .try-button:hover {
+            background-color: #0056b3;
+        }
+         @media (max-width: 700px) {
+            .container { padding: 16px; margin: 70px 12px; }
+            .home-button { padding: 10px 14px; font-size: 16px; }
+            .problem-image { max-width: 340px; }
+        }
+         hhtml::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+</style>
+
+</head>
+<body>
+     <a href="index.html" class="home-button">Home</a>
+
+    <div class="container">
+  <h1>Website Introduction</h1>
+
+    <p>
+    I first built this project to mark the end of my own Math Olympiad journey. It was a way to record the Euclidean geometry problems that once defined those years - problems that reflected my passion, my struggles, and the moments of discovery that shaped how I think about mathematics.
+    </p>
+
+    <p>
+    Many of these problems left a lasting impression on me, either because they taught me something new through their difficulty, or because I managed to find an elegant idea or solution that made me proud. I didn’t want those ideas to fade away with time, so I began writing everything down in a uniform format.
+    </p>
+
+    <p>
+    When I look back, I can clearly see what I was thinking, remember the problems that challenged me the most, and recall the memories tied to them. Gradually, I wanted this website to be more than a personal record. I decided to share these beautiful problems and ideas with others, so they too could learn from or enjoy them.
+    </p>
+
+    <p>
+    I updated the website to allow new users to try solving the problems themselves, or to read about the techniques I often use in geometry. I’ve come to realize that knowledge only holds true value when it is shared, not when it is kept to oneself.
+    </p>
+
+    <p>
+    This project is also my way of honoring the people who made this journey meaningful - my teachers who guided me and shared beautiful problems, the members of geometry forums who inspired me, and my friends who stayed up late discussing tiny details together. Many of the problems on this site came from them, and I wanted to keep them here as a way to remember and thank them.
+    </p>
+    <p>
+    Each problem there carries a special meaning to me, either because it taught me something new or because it left a deep impression through its elegance.
+    </p>
+    <p>
+    The main page is divided into two parts. On the left is the section called <em>Selected Exercises</em>, which includes problems from competitions, from the Vietnamese Euclidean Geometry Facebook group, and from the AoPS community. 
+    </p>
+
+    <figure style="text-align:center; margin: 2em 0;">
+    <img src="About_selectedproblems.jpg" alt="Preview of selected geometry exercises" style="max-width: 80%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+    <figcaption style="font-size: 0.9em; color: #555;">A glimpse of the <em>Selected Exercises</em> section — where most of the fun (and frustration) happens.</figcaption>
+    </figure>
+
+    <p>
+    On the right side, I grouped a few problem-solving techniques that kept reappearing during my solutions, such as inversion, ratio chasing, and vectors.
+    </p>
+
+    <figure style="text-align:center; margin: 2em 0;">
+    <img src="About_techniques.jpg" alt="Geometry techniques diagram" style="max-width: 80%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+    <figcaption style="font-size: 0.9em; color: #555;">Some of the recurring ideas — inversion, similarity, ratios — that quietly connect many problems together.</figcaption>
+    </figure>
+
+    <p>
+    Each problem page follows a simple layout. It includes the problem statement, a link to <strong>“My Solution”</strong>, and another link labeled <strong>“Try It Yourself”</strong>. The second link lets users download a <code>.gsp</code> file that can be opened in <strong>Geometer’s Sketchpad</strong>, so they can experiment, make constructions, test their own conjectures, and perhaps even find a better solution than mine.
+    </p>
+        <figure style="text-align:center; margin: 2em 0;">
+        <img src="About_problemlayout.jpg" alt="Geometry techniques diagram" style="max-width: 80%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+        <figcaption style="font-size: 0.9em; color: #555;">Each problem layout</figcaption>
+        </figure>
+    <p>
+    Each page in the problem-solving techniques section presents my general approach to using the technique, followed by an illustrative example problem of how the technique is applied according to my idea. The page concludes with a set of practice problems designed to reinforce understanding of the technique.
+    </p>
+        <figure style="text-align:center; margin: 2em 0;">
+        <img src="About_techniquespage_layout.jpg" alt="Geometry techniques diagram" style="max-width: 80%; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+        <figcaption style="font-size: 0.9em; color: #555;">Each problem layout</figcaption>
+        </figure>
+    <p>
+    The page titled <strong>“Before Using”</strong> explains this structure in detail: how to navigate problem pages, use the <code>.gsp</code> files, and make the most out of the site’s functions. It’s meant as a short guide for anyone exploring the problems for the first time.
+    </p>
+
+    <p>
+    To me, this website isn’t just a collection of problems. It’s a record of the people, ideas, and moments that shaped how I see Euclidean geometry. It represents the teachers who shared knowledge, the friends who discussed with me until midnight, and the quiet satisfaction of finding something that finally works.
+    </p>
+
+    <p>
+    If anyone finds this website helpful, that is already more than I could have hoped for.
+    </p>
+
+</div>
+
+
+</html>
+
+        

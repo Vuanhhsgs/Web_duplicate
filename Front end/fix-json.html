@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Enrich problems_set.json</title>
+</head>
+<body>
+  <button id="saveBtn" disabled>Save updated JSON</button>
+  <a id="downloadLink" style="display:none">download</a>
+
+  <script>
+    let enriched = [];                       // will hold the new array
+
+    fetch('problems_set.json')
+      .then(r => r.json())
+      .then(async problemsData => {
+        // enrich every problem
+        for (const p of problemsData) {
+          const htmlText = await fetch(p.section_html).then(r => r.text());
+          const doc = new DOMParser().parseFromString(htmlText, 'text/html');
+
+          const box  = doc.getElementById(p.id);
+          if (!box) { console.warn('no element with id', p.id); continue; }
+
+          const contentDiv = box.querySelector('.problem-content');
+          let txt = contentDiv ? contentDiv.textContent.trim() : '';
+          txt = txt.replace(/Try It Yourself/gi, '');
+
+          enriched.push({ ...p, content: txt });   // add the new field
+        }
+
+        // enable the save button
+        document.getElementById('saveBtn').disabled = false;
+      });
+
+    // when user clicks, offer the new JSON as a file download
+    document.getElementById('saveBtn').addEventListener('click', () => {
+      const blob = new Blob([JSON.stringify(enriched, null, 2)], { type: 'application/json' });
+      const url  = URL.createObjectURL(blob);
+      const a    = document.getElementById('downloadLink');
+      a.href     = url;
+      a.download = 'problems_set_updated.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>

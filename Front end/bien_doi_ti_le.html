@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<link rel="stylesheet" href="section_problem.css">
+<body>
+
+    <a href="index.html" class="home-button">Home</a>
+    <a id="extra-button" class="extra-button">Show techniques used</a>
+    <a href = "Truockhilambai.html" class="beforeusing-button">How to Use the Website</a>
+        <div class="side-nav">
+  <div class="main-nav-btn">Navigate</div>
+
+  <div class="nav-submenu">
+    <a href="dethi.html">Problems from Exams</a>
+    <a href="baitapAoPs.html">Problems from AoPS Forum</a>
+    <a href="group_hinhhocphang.html">Problems from Vietnamese Geometry Forum</a>
+    <a href="nghich_dao.html">Inversion Problems</a>
+    <a href="bien_doi_ti_le.html">Ratio Chasing Problems</a>
+    <a href="vector.html">Vectors Problems</a>
+  </div>
+</div>
+
+    <div class = "title-container">
+    <h1>Ratio Chasing</h1>
+    </div>
+    <div class="container">
+        <h2 class="bold-text">Common Approach</h2>
+        <p class="centered-text">By using a combination of familiar theorems such as Menelaus and Ceva, techniques like cross-ratio, together with the law of sines (For triangle \(ABC\), we have 
+\[
+\dfrac{\sin \angle ABC}{\sin \angle ACB} = \dfrac{AC}{AB}
+\]
+), I want to highlight the practicality of this method when it is not possible to prove it in the usual way.
+</p>
+    </div>
+
+        <div class="container">
+        <h2 class="bold-text">Example from a problem I solved</h2>
+        <div class="problem-box" id = "illustrate_ratio">		
+        <div class="problem-title">Illustrative Problem</div>
+	   <div class="problem-tag hardness-very">Very Hard</div>
+     
+        <div class="problem-content">
+            (Source: AoPs, user <a href="https://artofproblemsolving.com/community/user/1039572" target="_blank" style =  "color: white">goaoat</a>)
+            Let \( \triangle ABC \) be a triangle with orthocenter \( H \) and circumcircle \( (O) \).  
+       Let the tangents from \( B \) and \( C \) to \( (O) \) intersect at \( K \),  
+       and let the feet of \( K \) onto \( AC \) and \( AB \) be \( E \) and \( F \).  
+       Let the circle with diameter \( EF \) intersect the nine-point circle of \( \triangle ABC \)  
+       at \( X \) and \( Y \). If the tangents from \( X \) and \( Y \)  
+       to the nine-point circle intersect at \( Z \), show that \( H, K, Z \) are collinear.
+        
+        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbaividuhinhminhhoa.png?v=1739714854795" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratio_illustrativeProblem.gsp" target = "_blank">Try It Yourself</a>
+        </div>
+    </div>
+    </div>
+     </div>
+<div class = "container" style = "width: 100%; max-width: 1000px;">
+    <h2>Solution:</h2>
+    <iframe 
+  src="ratiochasingProblem_solution.pdf"
+  width="100%"
+  height="800px"
+  style="border:none; border-radius:12px; box-shadow:0 0 20px rgba(255,255,255,0.1);">
+</iframe>
+          
+    
+    </div>
+
+    <div class="container">
+        <h2 class="bold-text">Practice Problems</h2>
+    </div>
+   <div class="problem-box" id = "ratiochasing_Problem1">		
+        <div class="problem-title">Problem 1</div>
+       	<div class="problem-tag hardness-extreme">Extremely Hard</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum) Given triangle \(ABC\). Circle \((K)\) passing through \(B\) and \(C\) intersects \(CA\) and \(AB\) again at points \(E\) and \(F\) respectively. Let \(H\) be a point such that \(HE \perp CA\) and \(HF \perp AB\). Line \(AH\) intersects the circle \((BHC)\) again at \(D\). Line \(KD\) intersects \(BC\) at \(P\). On line \(AP\), choose point \(X\) such that \(HX \parallel BC\). A circle passing through \(A\) and \(H\) intersects \(CA\) and \(AB\) again at points \(M\) and \(N\) respectively. Circle \((J)\) passes through \(B\) and \(N\) and is tangent to line \(HB\). Circle \((L)\) passes through \(C\) and \(M\) and is tangent to line \(HC\). Prove that point \(X\) lies on the radical axis of circles \((J)\) and \((L)\).
+        </div>
+        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1.png?v=1739715498383" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1.gsp?v=1739715938071" download = "nghichdaobai1.gsp">Try It Yourself</a>
+            <a href="loigiaibdtlbai1.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	 <div class="problem-box" id = "ratiochasing_Problem2">		
+        <div class="problem-title">Problem 2</div>
+       	<div class="problem-tag hardness-moderate">Moderate</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum)Let \( \triangle ABC \) be inscribed in the circle \( (O) \), and let \( P \) be an arbitrary point.  
+\( PQ \) is the diameter of the circumcircle of \( \triangle PBC \).  
+Points \( E \) and \( F \) lie on \( PC \) and \( PB \), respectively, such that \( EF \perp OQ \).  
+Lines \( PB \) and \( PC \) intersect \( (O) \) again at \( M \) and \( N \), respectively.  
+The circumcircles of \( \triangle CME \) and \( \triangle BNF \) intersect \( PB \) and \( PC \) again at \( K \) and \( L \), respectively.  
+Prove that the four points \( E, F, K, L \) lie on a circle \( (J) \), and \( J \) lies on \( PQ \).
+
+        </div>
+        <img src="hinh_bdtlbai2.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem2.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai2.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+	
+	<div class="problem-box" id = "ratiochasing_Problem3">		
+        <div class="problem-title">Problem 3</div>
+       	<div class="problem-tag hardness-moderate">Moderate</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum)Given a triangle \( ABC \) with incenter \( I \).  
+The perpendicular bisectors of \( AB \) and \( AC \) intersect \( IB \) and \( IC \) at \( M \) and \( N \), respectively.  
+The perpendicular bisector of \( IA \) intersects \( CA \) and \( AB \) at \( E \) and \( F \), respectively.  
+
+Choose points \( S \) and \( T \) such that  
+\( AS \perp AM \), \( FS \perp AB \), \( AT \perp AN \), and \( ET \perp AC \).  
+
+Choose points \( Q \) and \( R \) such that  
+\( MQ \parallel SR \parallel AB \) and \( TQ \parallel NR \parallel AC \).  
+
+Prove that \( QR \perp AO \), where \( O \) is the circumcenter of \( \triangle ABC \).
+
+        </div>
+        <img src="hinh_bdtlbai3.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem3.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai3.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	<div class="problem-box" id = "ratiochasing_Problem4">		
+        <div class="problem-title">Problem 4</div>
+       	<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum)Given a triangle \(ABC\) with incircle \((I)\) touching \(CA\) and \(AB\) at \(E\) and \(F\), respectively. The lines \(IB\) and \(IC\) intersect the circumcircle \((ABC)\) again at \(M\) and \(N\), respectively. Let \(P\) and \(Q\) be the reflections of \(C\) and \(B\) across \(M\) and \(N\), respectively. Denote \(J\), \(K\), and \(L\) as the circumcenters of triangles \(APQ\), \(BFQ\), and \(CEP\), respectively. Prove that \(FK\), \(EL\), and \(AJ\) are concurrent.
+        </div>
+        <img src="hinh_bdtlbai4.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem4.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai4.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+	<div class="problem-box" id = "ratiochasing_Problem5">		
+        <div class="problem-title">Problem 5</div>
+       	<div class="problem-tag hardness-moderate">Moderate</div>
+        <div class="problem-content">
+            	(Teacher Tran Quang Hung on AoPS forum)Let the triangle \(ABC\) with \(P,Q\) as two isogonal conjugate points. 
+\(E,F\) are the projections of \(P\) onto \(CA,AB\) respectively. 
+\(M,N\) are symmetrical of \(Q\) through the midpoints of \(BE,CF\) respectively. 
+\(MN\) meets \(EF\) at \(R\). 
+Prove that \(PR\parallel BC\).
+
+        </div>
+        <img src="hinh_bdtlbai5.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem5.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai5.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+	<div class="problem-box" id = "ratiochasing_Problem6">		
+        <div class="problem-title">Problem 6</div>
+       	<div class="problem-tag hardness-very">Very Hard</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum)Let \(ABC\) be an acute triangle inscribed in circle \((O)\). Let \(M,N\) be the midpoints of \(AB,AC\), respectively. Let \(E,F\) be the midpoints of the minor arcs \(CA,AB\), respectively. \(EF\) meets \(CA,AB\) at \(Q,R\), respectively. Let \(L,K\) be the projections of \(E,F\) onto \(AO\), respectively. Let \(S,T\) be the centers of \((RMK),(QNL)\), respectively. On line \(ST\), take \(X\) such that \(XO\perp OA\). Suppose the line through \(X\) parallel to \(EF\) intersects \((O)\) at \(Y,Z\). Prove that the orthocenter of triangle \(AYZ\) lies on \(EF\).
+        </div>
+        <img src="hinh_bdtlbai6.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem6.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai6.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+<script src="section_problem_script.js"></script>
+</body>
+</html>
